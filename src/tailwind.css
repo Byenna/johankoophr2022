@@ -3,13 +3,15 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-      @apply font-montserrat text-Kooph-p;
+    body {
+      @apply font-montserrat text-Kooph-p container ;
     }
 };
 
 @layer components {
     .h1 {
-        @apply text-Kooph1 font-dancing;
+        @apply text-Kooph1 font-dancing text-tertiary;
     }
+   
+    
 };
