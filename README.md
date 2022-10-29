@@ -1,2 +1,5 @@
-# johankoophr2022
-New website to practice tailwind and alpine
+# alpinejs
+excercises 
+
+npm install
+npm run purge
