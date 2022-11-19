@@ -4,13 +4,13 @@
 
 @layer base {
     body {
-      @apply font-montserrat text-Kooph-p container ;
+      @apply font-montserrat text-Kooph-p;
     }
 };
 
 @layer components {
     .h1 {
-        @apply text-Kooph1 font-dancing text-tertiary;
+        @apply text-Kooph1 font-dancing text-secondary;
     },
     .btn-primary {
         

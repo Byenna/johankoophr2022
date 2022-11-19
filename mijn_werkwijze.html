@@ -1,0 +1,342 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Johan Koop HR-Advies</title>
+    <link rel="stylesheet" href="./output/tailwind.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+
+    <style>
+		[x-cloak] {
+			display: none;
+		}
+    </style>
+
+</head>
+<body 
+class="bg-white"
+
+>
+       <!-- ---start--header----- -->
+       <header id="header" class="py-20 flex justify-center">
+        <div class="inner flex ">
+
+            <!-- Logo -->
+                <a href="index.html" class="logo mx-10">
+                    <span class="symbol"><img class="block w-auto h-16" src="images/logojohand.png" alt="" /></span><span class="title"></span> 
+                </a>
+
+               
+                <h1 class="font-dancing h1 my-2"> <span class="mr-1">
+                    <i class="fas fa-quote-left"></i>
+                </span>Mensen bedenken organisaties,<br> ontwerpen organisaties, werken in organisaties <br> en leven in organisaties.<span class="mr-1">
+                    <i class="fas fa-quote-right"></i>
+                </span></h1>
+
+                 
+
+        </div>
+        </header>
+       <!-- ---end--header----- -->
+
+       <!-- ---start--sidebar-menu----- -->
+       <nav 
+       x-data="{ isOpen: false }"
+       >
+
+           <div class="fixed right-8 top-5 z-50">
+               <ul>
+                   <div class="block p-0"><a 
+                       class="block relative leading-10 uppercase py-0 px-6 bg-primary rounded-md border-0 " 
+                       href="#menu"
+                       @click="isOpen = !isOpen"
+                       ><i class="fa-solid fa-bars"></i></a></div>
+               </ul>
+           </div>
+
+           <div
+               class="z-40 fixed top-0 bottom-0 right-0 p-2 w-[300px] overflow-y-auto text-center bg-tertiary "
+               x-cloak
+               x-show="isOpen"
+               :class=" isOpen ? 'right-0': '-right-[300px]' "
+               x-collapse x-collapse.duration.1000ms
+               @click.outside="isOpen = false"
+           >
+               <div class="text-gray-100 text-xl">
+               <div class="p-2.5 mt-1 flex items-center">
+                   <div ><img class="w-auto h-14" src="./images/logojohand.png" alt="logo"></div>
+               </div>
+               <div class="my-2 bg-gray-600 h-[1px]"></div>
+               </div>
+           
+               <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-secondary text-white">
+               <span class="text-[15px] ml-4 text-gray-200 font-bold"><a href="./index.html">Home</a></span>
+               </div>
+               <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-secondary text-white">
+               <span class="text-[15px] ml-4 text-gray-200 font-bold"><a href="./over-mij.html">Over mij</a></span>
+               </div>
+               <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-secondary text-white">
+                   <span class="text-[15px] ml-4 text-gray-200 font-bold"><a href="./mijn_werkwijze.html">Mijn werkwijze</a></span>
+                   </div>
+               <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-secondary text-white">
+                   <span class="text-[15px] ml-4 text-gray-200 font-bold"><a href="./contact.html">Contact</a></span>
+                   </div>
+   
+               <div class="my-4 bg-gray-600 h-[1px]"></div>
+   
+   
+           <div
+           x-data="{open: false}"
+           >
+   
+               <div
+               class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-secondary text-white"
+               
+               >
+               
+               <div class="flex justify-between w-full items-center">
+                   <a href="./bekwaamheden.html">
+                       <span
+                       class="text-[15px] ml-4 text-gray-200 font-bold"
+                       @mouseover="open = !open"
+                       >Bekwaamheden</span>
+                   </a>
+               
+               </div>
+   
+               </div>
+   
+               <div
+               class="text-left text-sm mt-2 w-4/5 mx-auto text-gray-200 font-bold"
+               id="submenu"
+               @click.outside="open = false"
+               x-show="open"
+               x-transition
+               >
+               <h2 class="cursor-pointer p-2 hover:bg-secondary rounded-md mt-1">
+                   <a href="./content1.html">content1</a>
+               </h2>
+               <h2 class="cursor-pointer p-2 hover:bg-secondary rounded-md mt-1">
+                   <a href="./content2.html">content2</a>
+               </h2>
+               <h2 class="cursor-pointer p-2 hover:bg-secondary rounded-md mt-1">
+                   <a href="./content3.html">content3</a>
+               </h2>
+               <h2 class="cursor-pointer p-2 hover:bg-secondary rounded-md mt-1">
+                   <a href="./content4.html">content4</a>
+               </h2>
+               <h2 class="cursor-pointer p-2 hover:bg-secondary rounded-md mt-1">
+                   <a href="./content5.html">content5</a>
+               </h2>
+               <h2 class="cursor-pointer p-2 hover:bg-secondary rounded-md mt-1">
+                   <a href="./content6.html">content6</a>
+               </h2>
+               <h2 class="cursor-pointer p-2 hover:bg-secondary rounded-md mt-1">
+                   <a href="./content7.html">content7</a>
+               </h2>
+               <h2 class="cursor-pointer p-2 hover:bg-secondary rounded-md mt-1">
+                   <a href="./content8.html">content8</a>
+               </h2>
+               <h2 class="cursor-pointer p-2 hover:bg-secondary rounded-md mt-1">
+                   <a href="./content9.html">content9</a>
+               </h2>
+              
+
+               </div>
+   
+           
+               
+               </div>
+   
+           </div>
+
+       </nav>
+      <!-- ---end-sidebar-menu----- -->
+
+       <!-- ---start--main----- -->
+       <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto flex flex-wrap">
+          <div class="flex flex-wrap w-full">
+            <div class="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
+              <div class="flex relative pb-12">
+                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-secondary inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STAP 1</h2>
+                  <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+                </div>
+              </div>
+              <div class="flex relative pb-12">
+                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-secondary inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STAP 2</h2>
+                  <p class="leading-relaxed">Vice migas literally kitsch +1 pok pok. Truffaut hot chicken slow-carb health goth, vape typewriter.</p>
+                </div>
+              </div>
+              <div class="flex relative pb-12">
+                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-secondary inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <circle cx="12" cy="5" r="3"></circle>
+                    <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STAP 3</h2>
+                  <p class="leading-relaxed">Coloring book nar whal glossier master cleanse umami. Salvia +1 master cleanse blog taiyaki.</p>
+                </div>
+              </div>
+              <div class="flex relative pb-12">
+                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-secondary inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STAP 4</h2>
+                  <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+                </div>
+              </div>
+              <div class="flex relative">
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-secondary inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                    <path d="M22 4L12 14.01l-3-3"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">FINISH</h2>
+                  <p class="leading-relaxed">Pitchfork ugh tattooed scenester echo park gastropub whatever cold-pressed retro.</p>
+                </div>
+              </div>
+            </div>
+            <img class="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12" src="./images/voeten_grond.jpeg" alt="STAP">
+          </div>
+        </div>
+      </section>
+       <!-- ---end--main----- -->
+
+       <!-- ---start--footer----- -->
+         <footer class="text-gray-600 bg-primary-light">
+            <div class="container">
+
+            <div class="px-5 py-24 mx-auto">
+              <div class="flex flex-wrap md:text-left text-center order-first">
+
+
+                <div class="lg:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-9">JOHAN KOOP HR ADVIES</h2>
+                    <ul>
+                    <li>
+                        <a class="text-gray-600 hover:text-gray-800">Privacyverklaring</a>
+                      </li>
+                      <li>
+                        <a class="text-gray-600 hover:text-gray-800">Algemene voorwaarden</a>
+                      </li>
+                      <li>
+                        <a class="text-gray-600 hover:text-gray-800">telefoon</a>
+                      </li>
+                      <li>
+                        <a class="text-gray-600 hover:text-gray-800">Email</a>
+                      </li>
+                    </ul>
+                </div>
+                <div class="lg:w-1/2 w-full px-4">
+                  
+
+
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CONTACT</h2> <p class="text-gray-500 text-sm mt-2 md:text-left text-center">Neemt u gerust contact op voor 
+                    een vrijblijvende afspraak
+                  </p>
+                
+
+                   <section>
+                   
+                    <form method="post" action="#">
+                        <div class="fields">
+                            <div class="field half">
+                                <input type="text" name="name" id="name" placeholder="Naam" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-yellow-200 focus:border-secondary text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+                            </div>
+                            <div class="field half">
+                                <input type="email" name="email" id="email" placeholder="Email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-yellow-200 focus:border-secondary text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+                            </div>
+                            <div class="field">
+                                <textarea name="message" id="message" placeholder="Schrijf hier uw bericht" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-yellow-200 focus:border-secondary text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"></textarea>
+                            </div>
+                        </div>
+                        <ul class="actions">
+                            <li><input type="submit" value="Verstuur" class="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-secondary border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded"/></li>
+                        </ul>
+                    </form>
+                   </section>
+                 
+                </div>
+
+              </div>
+            </div>
+
+            </div>
+
+            <!-- --start-copyright--footer----- -->
+            <div class="bg-primary">
+              <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+                <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                  <img width="70" src="./images/logojohand.png" alt="">
+                  <span class="ml-3 text-xl">Tailblocks</span>
+                </a>
+                <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4"> JOHAN KOOP HR ADVIES —
+                  <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">© 2022</a>
+                </p>
+                <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                 Linked
+                  <a class="ml-3 text-gray-500">
+                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                      <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+            <!-- --end---copyright--footer----- -->
+          </footer>
+       <!-- --end---footer----- -->
+
+
+
+<!-- This is a Alpine.js plugin "Collapse" to enable smoother open/collapse transitions than what comes out of the box with Alpine.js -->
+<script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+
+<script src="https://unpkg.com/alpinejs" defer></script>
+</body>
+</html>
+
